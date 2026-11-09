@@ -16,3 +16,5 @@ jupyter lab
 ```
 
 Les notebooks sont dans `notebooks/`. Le cache FastF1 est stocké dans `cache/` à la racine (ignoré par Git).
+
+Pas encore fini
