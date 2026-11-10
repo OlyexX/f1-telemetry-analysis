@@ -1,9 +1,9 @@
-# Environnements virtuels
+# Virtual environments
 .venv/
 venv/
 env/
 
-# Cache FastF1 (peut peser plusieurs centaines de Mo)
+# FastF1 cache (can weigh several hundred MB)
 cache/
 
 # Jupyter
@@ -15,13 +15,13 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 
-# Secrets / variables d'environnement
+# Secrets / environment variables
 .env
 
-# Fichiers système
+# System files
 .DS_Store
 Thumbs.db
 
-# Éditeurs
+# Editors
 .vscode/
 .idea/
