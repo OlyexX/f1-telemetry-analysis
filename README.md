@@ -1,36 +1,38 @@
 # f1-telemetry-analysis
 
-Analyse de télémétrie de Formule 1 avec Python et [FastF1](https://docs.fastf1.dev/).
+Formula 1 telemetry analysis with Python and [FastF1](https://docs.fastf1.dev/).
 
-> 🚧 **Projet en cours de réalisation.** Les analyses, les graphiques et les conclusions arrivent au fil de l'avancement.
+> 🚧 **Work in progress.** Analyses, charts and conclusions will be added as the project moves forward.
 
-## Objectif
+## Goal
 
-Répondre à une question simple à partir des données officielles de la F1 :
+Answer a simple question using official F1 data:
 
-> **Pourquoi tel pilote a-t-il été plus rapide que tel autre ?**
+> **Why was one driver faster than another?**
 
-C'est aussi un projet d'apprentissage de l'analyse de données avec **pandas**, **numpy** et **matplotlib**.
+This is also a learning project for data analysis with **pandas**, **numpy** and **matplotlib**.
 
-## Avancement
+## Progress
 
-| Étape | Notebook | État |
+| Step | Notebook | Status |
 |---|---|---|
-| Mise en place et cache FastF1 | `01_exploration` | ✅ Terminé |
-| Chargement d'une session | `01_exploration` | ✅ Terminé |
-| Exploration des données de tours | `01_exploration` | 🚧 En cours |
-| Comparaison du rythme de deux pilotes | `02_comparaison_pilotes` | ⏳ À venir |
-| Graphiques (temps au tour, régularité) | `03_graphiques` | ⏳ À venir |
-| Télémétrie : où se fait la différence | `04_telemetrie` | ⏳ À venir |
-| Extraction des fonctions réutilisables | `src/` | ⏳ À venir |
+| Setup and FastF1 cache | `01_exploration` | ✅ Done |
+| Loading a session | `01_exploration` | ✅ Done |
+| Exploring lap data | `01_exploration` | 🚧 In progress |
+| Comparing the race pace of two drivers | `02_comparaison_pilotes` | ⏳ Planned |
+| Charts (lap times, consistency) | `03_graphiques` | ⏳ Planned |
+| Telemetry: where the difference is made | `04_telemetrie` | ⏳ Planned |
+| Extracting reusable functions | `src/` | ⏳ Planned |
 
-## Structure du projet
+> The notebooks themselves are written in French.
+
+## Project structure
 
 ```
 f1-telemetry-analysis/
-├── image/        graphiques exportés (pour ce README)
-├── notebooks/    exploration et analyses, un notebook par étape
-├── src/          fonctions réutilisables (à venir)
+├── image/        exported charts (for this README)
+├── notebooks/    exploration and analyses, one notebook per step
+├── src/          reusable functions (planned)
 ├── requirements.txt
 └── README.md
 ```
@@ -44,37 +46,37 @@ source .venv/bin/activate.fish   # fish
 pip install -r requirements.txt
 ```
 
-### Compte Formula 1
+### Formula 1 account
 
-Depuis FastF1 3.9, les données de tours et la télémétrie nécessitent une connexion à un compte Formula 1.
-Sans connexion, seuls les résultats des sessions sont disponibles.
-La connexion se fait une seule fois, dans un terminal, avec l'environnement virtuel activé :
+Since FastF1 3.9, lap and telemetry data require signing in to a Formula 1 account.
+Without it, only session results are available.
+Sign in once, from a terminal, with the virtual environment activated:
 
 ```bash
 python -m fastf1 auth f1tv --authenticate
 ```
 
-Vérifier la connexion :
+Check the sign-in status:
 
 ```bash
 python -m fastf1 auth f1tv --status
 ```
 
-## Lancer Jupyter
+## Running Jupyter
 
-Depuis la racine du repo :
+From the root of the repo:
 
 ```bash
 jupyter lab
 ```
 
-Les notebooks sont dans `notebooks/` et se lisent dans l'ordre (01, 02, 03, 04).
-Le cache FastF1 est stocké dans `cache/` à la racine (ignoré par Git).
+The notebooks are in `notebooks/` and are meant to be read in order (01, 02, 03, 04).
+The FastF1 cache is stored in `cache/` at the root (ignored by Git).
 
-## Résultats
+## Results
 
-*À venir.*
+*Coming soon.*
 
-## Licence
+## License
 
 [MIT](LICENSE)
